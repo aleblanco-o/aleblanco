@@ -67,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isDark) {
       toggleButton.querySelector('.sun-icon').style.display = 'inline-block';
       toggleButton.querySelector('.moon-icon').style.display = 'none';
-      toggleButton.querySelector('.toggle-text').textContent = 'Modo claro';
+      toggleButton.querySelector('.toggle-text').textContent = 'Light';
     } else {
       toggleButton.querySelector('.sun-icon').style.display = 'none';
       toggleButton.querySelector('.moon-icon').style.display = 'inline-block';
-      toggleButton.querySelector('.toggle-text').textContent = 'Modo oscuro';
+      toggleButton.querySelector('.toggle-text').textContent = 'Dark';
     }
   }
   
