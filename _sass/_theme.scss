@@ -117,3 +117,45 @@ html.dark {
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+// Tema claro (por defecto)
+html[data-theme="light"] {
+  body {
+    background-color: $flexoki-paper;
+    color: $flexoki-black;
+  }
+
+  a {
+    color: $flexoki-red-300;
+  }
+
+  header, footer {
+    background-color: $flexoki-100;
+  }
+
+  code {
+    background-color: $flexoki-50;
+    color: $flexoki-700;
+  }
+}
+
+// Tema oscuro
+html[data-theme="dark"] {
+  body {
+    background-color: $flexoki-900;
+    color: $flexoki-100;
+  }
+
+  a {
+    color: $flexoki-red-100;
+  }
+
+  header, footer {
+    background-color: $flexoki-800;
+  }
+
+  code {
+    background-color: $flexoki-950;
+    color: $flexoki-100;
+  }
+}
