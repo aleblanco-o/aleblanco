@@ -1,4 +1,4 @@
-/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -85,7 +85,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 /**
@@ -114,11 +114,10 @@ small {
 
 sub,
 sup {
-  font-size: 85%;
+  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-  font-variant-numeric: tabular-nums;
 }
 
 sub {
@@ -126,7 +125,7 @@ sub {
 }
 
 sup {
-  top: -0.35em;
+  top: -0.5em;
 }
 
 /* Embedded content

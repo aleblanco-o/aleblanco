@@ -1,0 +1,159 @@
+@import "flexoki-variables";
+@import "theme";
+
+// Use Flexoki variables instead of the original HSL colors
+$color-primary: var(--tx);
+$color-text: var(--tx-2);
+$color-subtext: var(--tx-3);
+$color-border: var(--ui-2);
+$color-box-background: var(--bg-2);
+$border-radius: 4px;
+$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+body {
+  box-sizing: content-box;
+  font-family: $font-family;
+  margin: 0 auto;
+  line-height: 1.7;
+  padding: 4vh 6vw;
+  overflow-x: hidden;
+  color: var(--tx-2);
+  font-size: 1rem;
+  max-width: 63em;
+  background-color: var(--bg);
+
+  @media (min-width: 820px) {
+    font-size: 1.2rem;
+  }
+}
+
+time {
+  display: block;
+  color: var(--tx-3);
+  margin: 0.5em 0 1em;
+}
+
+footer {
+  margin: 2em 0;
+  font-size: 0.8em;
+  color: var(--tx-3);
+  padding-top: 1em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-height: 75vh;
+  border-radius: $border-radius;
+}
+
+blockquote {
+  padding: 1.5em;
+  margin: 0;
+  font-size: 0.88em;
+  background: var(--bg-2);
+  border-radius: $border-radius;
+
+  p {
+    margin: 0;
+  }
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  margin: 1.5em 0;
+  background: var(--ui-2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: var(--tx);
+}
+
+a {
+  transition: background 300ms;
+  padding: 0 0.1em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ui-2);
+  color: var(--cy);
+  &:hover {
+    color: var(--cy-2) !important;
+    background: var(--bg-2);
+  }
+  &:after {
+    position: relative;
+    top: -0.5em;
+    font-size: 0.7em;
+    content: "↗";
+    color: var(--tx-3);
+  }
+  &.internal-link:after,
+  &.footnote:after,
+  &.reversefootnote:after {
+    content: "";
+  }
+}
+
+*:focus {
+  background: var(--ye-2) !important;
+  color: var(--tx) !important;
+}
+
+nav {
+  margin: 1em 0 3em;
+}
+
+#notes-entry-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas:
+    "content"
+    "side";
+
+  @media (min-width: 700px) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content side";
+  }
+}
+
+.backlink-box {
+  background: var(--bg-2);
+  padding: 1em;
+  border-radius: $border-radius;
+}
+
+code {
+  background: var(--ui);
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+}
+
+.invalid-link {
+  color: var(--tx-3);
+  cursor: help;
+  background: var(--bg-2);
+  padding: 0 0.1em;
+}
+
+.invalid-link-brackets {
+  color: var(--tx-3);
+  cursor: help;
+}
+
+// Theme toggle container
+.theme-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+}

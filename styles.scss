@@ -1,9 +1,19 @@
----
----
+@import "../.sass/normalize";
 
-@import "../_sass/flexoki-variables";
-@import "../_sass/theme";
-@import "../_sass/normalize";
-@import "../_sass/code";
-@import "../_sass/style";
-@import "../_sass/darkmode-switch";
+@import "../.sass/variables";
+@import "../.sass/spacing";
+@import "../.sass/style";
+
+@import "../.sass/content/backlinks";
+@import "../.sass/content/code";
+@import "../.sass/content/footnotes";
+@import "../.sass/content/headings";
+@import "../.sass/content/images";
+@import "../.sass/content/links";
+@import "../.sass/content/lists";
+@import "../.sass/content/tables";
+@import "../.sass/content/tags";
+
+@import "../.sass/components/inputs";
+@import "../.sass/components/popovers";
+@import "../.sass/components/theme-toggle";
