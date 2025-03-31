@@ -2,18 +2,80 @@
 <html lang="en" data-theme="light">
   {% include head.html %}
   <body>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('body').classList.add('theme-dark')
+      }
+    </script>
     <nav>{% include nav.html %}</nav>
     <div class="wrapper">
-      <div class="switch">
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-        </label>
-      </div>
+      <span id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode" type="button" role="switch" aria-checked="true">
+        <div class="theme-toggle-slide"></div>
+        <div class="theme-toggle-switch"></div>
+      </span>
       <main>{{ content }}</main>
       <footer>{% include footer.html %}</footer>
     </div>
     {% include link-previews.html wrapperQuerySelector="content" %}
-    <script src="/assets/js/darkmode-toggle.js"></script>
+    <script>
+      var darkModeToggle = document.querySelector("#theme-toggle");
+
+      function toggleTheme() {
+        document.body.classList.toggle("theme-dark");
+        updateThemeState();
+      }
+
+      function updateThemeState() {
+        let isDarkMode = document.body.classList.contains("theme-dark");
+        let theme = isDarkMode ? "dark" : "light";
+        localStorage.setItem("theme", theme);
+        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
+      }
+
+      function initializeTheme() {
+        let isDarkMode = document.body.classList.contains("theme-dark");
+        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
+      }
+
+      darkModeToggle.addEventListener("click", toggleTheme);
+
+      window.addEventListener('keydown', function(e) {
+          if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+            return;
+          }
+          if ((e.key === 'd' || e.key === 'D') && !e.ctrlKey && !e.metaKey) {
+            toggleTheme();
+          }
+      });
+
+      initializeTheme();
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const article = document.querySelector('article');
+        if (!article) return;
+        
+        const headings = article.querySelectorAll('h2, h3, h4, h5, h6');
+        
+        headings.forEach(heading => {
+          if (!heading.id) return;
+          
+          const anchor = document.createElement('a');
+          anchor.href = '#' + heading.id;
+          anchor.classList.add('anchor');
+          anchor.innerHTML = '#';
+          
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = window.location.origin + window.location.pathname + '#' + heading.id;
+            navigator.clipboard.writeText(url);
+            window.location.hash = heading.id;
+          });
+          
+          heading.appendChild(anchor);
+        });
+      });
+    </script>
   </body>
 </html>
