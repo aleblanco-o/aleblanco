@@ -1,0 +1,119 @@
+// Flexoki Theme Implementation
+@import "flexoki-variables";
+
+:root {
+  // Light theme variables (default)
+  --bg: #{$light-bg};
+  --bg-2: #{$light-bg-2};
+  --ui: #{$light-ui};
+  --ui-2: #{$light-ui-2};
+  --ui-3: #{$light-ui-3};
+  --tx-3: #{$light-tx-3};
+  --tx-2: #{$light-tx-2};
+  --tx: #{$light-tx};
+  --re: #{$light-re};
+  --or: #{$light-or};
+  --ye: #{$light-ye};
+  --gr: #{$light-gr};
+  --cy: #{$light-cy};
+  --bl: #{$light-bl};
+  --pu: #{$light-pu};
+  --ma: #{$light-ma};
+  --re-2: #{$light-re-2};
+  --or-2: #{$light-or-2};
+  --ye-2: #{$light-ye-2};
+  --gr-2: #{$light-gr-2};
+  --cy-2: #{$light-cy-2};
+  --bl-2: #{$light-bl-2};
+  --pu-2: #{$light-pu-2};
+  --ma-2: #{$light-ma-2};
+}
+
+// Dark theme variables
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #{$dark-bg};
+    --bg-2: #{$dark-bg-2};
+    --ui: #{$dark-ui};
+    --ui-2: #{$dark-ui-2};
+    --ui-3: #{$dark-ui-3};
+    --tx-3: #{$dark-tx-3};
+    --tx-2: #{$dark-tx-2};
+    --tx: #{$dark-tx};
+    --re: #{$dark-re};
+    --or: #{$dark-or};
+    --ye: #{$dark-ye};
+    --gr: #{$dark-gr};
+    --cy: #{$dark-cy};
+    --bl: #{$dark-bl};
+    --pu: #{$dark-pu};
+    --ma: #{$dark-ma};
+    --re-2: #{$dark-re-2};
+    --or-2: #{$dark-or-2};
+    --ye-2: #{$dark-ye-2};
+    --gr-2: #{$dark-gr-2};
+    --cy-2: #{$dark-cy-2};
+    --bl-2: #{$dark-bl-2};
+    --pu-2: #{$dark-pu-2};
+    --ma-2: #{$dark-ma-2};
+  }
+}
+
+// Dark theme class for manual toggle
+html.dark {
+  --bg: #{$dark-bg};
+  --bg-2: #{$dark-bg-2};
+  --ui: #{$dark-ui};
+  --ui-2: #{$dark-ui-2};
+  --ui-3: #{$dark-ui-3};
+  --tx-3: #{$dark-tx-3};
+  --tx-2: #{$dark-tx-2};
+  --tx: #{$dark-tx};
+  --re: #{$dark-re};
+  --or: #{$dark-or};
+  --ye: #{$dark-ye};
+  --gr: #{$dark-gr};
+  --cy: #{$dark-cy};
+  --bl: #{$dark-bl};
+  --pu: #{$dark-pu};
+  --ma: #{$dark-ma};
+  --re-2: #{$dark-re-2};
+  --or-2: #{$dark-or-2};
+  --ye-2: #{$dark-ye-2};
+  --gr-2: #{$dark-gr-2};
+  --cy-2: #{$dark-cy-2};
+  --bl-2: #{$dark-bl-2};
+  --pu-2: #{$dark-pu-2};
+  --ma-2: #{$dark-ma-2};
+}
+
+// Theme toggle button
+.theme-toggle {
+  background: var(--ui);
+  border: 1px solid var(--ui-3);
+  color: var(--tx-2);
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  
+  &:hover {
+    background: var(--ui-2);
+    color: var(--tx);
+  }
+  
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+}
+
+// Animation for theme transition
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
