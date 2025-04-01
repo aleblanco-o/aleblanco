@@ -1,11 +1,11 @@
 <nav class="flex align-center font-ui">
+    {% assign parts = page.url | split: '/' %}
     <span class="flex-grow">
         <a class="internal-link plain" href="/">Ale Blanco</a>
-        {% if page.layout == "note" and folder[1] %}
-        <span class="faint">/ {{ folder[1] | capitalize }}</span>
+        {% if page.layout == "note" and parts.size > 2 and parts[1] != "" %}
+            <a class="faint plain" href="{{ site.baseurl }}/{{ parts[1] }}/">/ {{ parts[1] | replace: "-", " " | capitalize }}</a>
         {% endif %}
     </span>
-    
     <span class="flex-shrink ssr">
       <a href="{{ site.baseurl }}/about" class="muted plain">About</a>
       <a href="{{ site.baseurl }}/now" class="muted plain ssl mh">Now</a>
