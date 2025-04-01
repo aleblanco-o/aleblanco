@@ -6,7 +6,7 @@
         {% assign filename = path_parts | last %}
         
         {% if page.layout == "note" and path_parts.size > 1 %}
-          {% assign folder_name = path_parts[0] %}
+          {% assign folder_name = path_parts[1] %}
           {% unless folder_name == "" or filename contains "index" %}
             <span class="faint">/</span>
             <a class="muted plain" href="{{ site.baseurl }}/{{ folder_name }}/">
