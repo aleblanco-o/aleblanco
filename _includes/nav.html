@@ -1,11 +1,15 @@
 <nav class="flex align-center font-ui">
-    {% assign parts = page.url | split: '/' %}
     <span class="flex-grow">
         <a class="internal-link plain" href="/">Ale Blanco</a>
-        {% if page.layout == "note" and parts.size > 2 and parts[1] != "" %}
-            <a class="faint plain" href="{{ site.baseurl }}/{{ parts[1] }}/">/ {{ parts[1] | replace: "-", " " | capitalize }}</a>
+        {% if page.type != 'pages' %}
+        {% assign path_parts = page.path | split: '/' %}
+        {% assign parent_folder = path_parts[1] %}
+            {% if folder %}
+                <a class="faint plain" href="{{ site.baseurl }}/{{ parent_folder }}/">/ {{ parent_folder | replace: "-", " " | capitalize }}</a>
+            {% endif %}
         {% endif %}
     </span>
+    
     <span class="flex-shrink ssr">
       <a href="{{ site.baseurl }}/about" class="muted plain">About</a>
       <a href="{{ site.baseurl }}/now" class="muted plain ssl mh">Now</a>
