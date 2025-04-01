@@ -1,7 +1,7 @@
 ---
 layout: categoria
 title: Animals
-permalink: /notes/animals/
+permalink: /animals
 category: animals
 ---
 
