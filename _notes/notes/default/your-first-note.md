@@ -1,6 +1,6 @@
 ---
 title: Your first seed
-catrerory: default
+category: default
 ---
 
 ### Welcome!

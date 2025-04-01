@@ -1,6 +1,6 @@
 ---
 title: Welcome
-catrerory: default
+category: default
 ---
 
 This is your new *vault*.

@@ -1,4 +1,6 @@
 ---
+title: Move your body every day
+category: default
 ---
 
 Move your body every day. Benefits include:

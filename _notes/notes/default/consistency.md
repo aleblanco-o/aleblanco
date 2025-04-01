@@ -1,6 +1,6 @@
 ---
 title: Consistency is key
-catrerory: default
+category: default
 ---
 
 Show up. Do the work. Be consistent.

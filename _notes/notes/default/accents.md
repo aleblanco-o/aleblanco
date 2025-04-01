@@ -1,6 +1,6 @@
 ---
 title: Bon appétit!
-catrerory: default
+category: default
 ---
 
 Page titles with accents are supported.
