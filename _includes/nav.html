@@ -1,6 +1,12 @@
 <nav class="flex align-center font-ui">
     <span class="flex-grow">
-      <a class="internal-link plain" href="/">Ale Blanco</a>
+        <a class="internal-link plain" href="/">Ale Blanco</a>
+        {% if page.layout == "note" %}
+        {% assign folder = page.url | split: '/' | slice: 1 %}
+        {% if folder %}
+          <span class="faint">/ {{ folder | capitalize }}</span>
+        {% endif %}
+      {% endif %}
     </span>
     
     <span class="flex-shrink ssr">
