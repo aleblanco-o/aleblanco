@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | capitalize }}</h1>
+
+<ul>
+  {% assign current_category = page.title %}
+  {% for note in site.notes %}
+    {% if note.category == current_category %}
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

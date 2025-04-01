@@ -22,6 +22,7 @@ relative_permalinks: false
 
 plugins:
   - jekyll-last-modified-at
+  - jekyll-archives
 
 sass:
   sass_dir:          _sass
@@ -32,6 +33,14 @@ collections:
     output: true
     permalink: /notes/:slug
 
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: topic
+  permalinks:
+    category: /topics/:name/
+    
 defaults:
   - scope:
       path: "**/*"
