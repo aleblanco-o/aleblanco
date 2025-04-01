@@ -2,11 +2,12 @@
     <span class="flex-grow">
         <a class="internal-link plain" href="/">Ale Blanco</a>
         {% if page.type != 'pages' %}
-        {% assign folder = page.url | split: '/' %}
-        {% if folder %}
-          <span class="faint">/ {{ folder[1] | capitalize }}</span>
+            {% assign folder = page.path | split: '/' %}
+            {% if folder %}
+                <span class="faint">/</span>
+                <a href="/" class="muted plain">{{ folder[1] | capitalize }}</a>
+            {% endif %}
         {% endif %}
-      {% endif %}
     </span>
     
     <span class="flex-shrink ssr">
