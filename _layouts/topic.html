@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<h1>{{ page.title | capitalize }}</h1>
+<h1>
+    <a class="internal-link" href="{{ site.baseurl }}/topics">Topics</a> 
+    <span class="faint">/</span> 
+    {{ page.title | replace: "-", " " | capitalize }}
+</h1>
 
 <ul>
   {% assign current_category = page.title %}
