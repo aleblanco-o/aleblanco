@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Topics
-permalink: /topics/
+permalink: /topics
 ---
 
 <h1>Topics</h1>
