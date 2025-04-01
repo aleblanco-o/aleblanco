@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | capitalize }}</h1>
+
+<ul>
+  {% assign category = page.category %}
+  {% assign filtered_notes = site.notes | where: "category", category | sort: "last_modified_at" | reverse %}
+  
+  {% for note in filtered_notes %}
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
