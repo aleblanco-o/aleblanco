@@ -9,6 +9,8 @@ permalink: /
 
 This is my digital garden, feel free to explore. 
 
+For my players ⚔️ : [[bahr]]
+
 <h2>Topics</h2>
 
 {% assign all_categories = "" | split: "" %}
