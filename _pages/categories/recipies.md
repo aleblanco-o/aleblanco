@@ -5,3 +5,6 @@ permalink: /recipies
 category: recipies
 ---
 
+## Tags
+
+[[bakery|Sweet]], [[wago|Wago]]
