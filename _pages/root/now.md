@@ -6,4 +6,8 @@ permalink: /now
 
 # What I'm doing
 
+- :
+
 # What I did
+
+- :

@@ -59,5 +59,3 @@ This is my digital garden, feel free to explore.
   }
 </style>
 
-This webpage is based on the this template [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template). The colors and structure are inspired by Steph Ango founder and CEO of Obsidian. 
-

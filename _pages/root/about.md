@@ -6,12 +6,17 @@ permalink: /about
 
 # About Ale
 
-*This is an about page.*
+Hey, I’m Alejandro. For several years, I tried to find the right way to collect my ideas and projects. After giving in to the relentless variability of structures that torment my mind, I ended up building this space, indpired by Steph Ango and the concept of Digital Garten. Here are a few links to explore:
 
-Feel free to tell the world about what you love! 😍
+- [[writing|Writing]]
+- [[projects|Projects]]
+- [[worldbuilding|Worldbuilding]]
+- [[recipies|Recipies]]
 
-```
+## Social
 
-x = (1 + sqrt(5)) / 2
+- :
 
-```
+## Colophon
+
+This webpage is based on [this template available on GitHub](https://github.com/maximevaillancourt/digital-garden-jekyll-template). The colors and structure are inspired by [Steph Ango](https://stephango.com), founder and CEO of [Obsidian](https://obsidian.md).
