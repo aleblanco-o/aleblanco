@@ -27,7 +27,7 @@ This is my digital garden, feel free to explore.
 <ul>
   {% for cat in sorted_categories %}
     <li>
-      <a href="{{ site.baseurl }}/categories/{{ cat | slugify }}">
+      <a href="{{ site.baseurl }}/{{ cat | slugify }}">
         {{ cat }}
       </a>
     </li>
