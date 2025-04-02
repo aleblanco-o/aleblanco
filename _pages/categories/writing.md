@@ -7,5 +7,5 @@ category: writing
 
 ## Tags
 
-[[Ideas]], [[Poetry]], [[Books]] 
+[[ideas|Ideas]], [[poetry|Poetry]], [[books|Books]] 
 
