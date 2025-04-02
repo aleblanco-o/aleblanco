@@ -2,18 +2,23 @@
 layout: default
 ---
 
-<h1>{{ page.title | capitalize }}</h1>
+<main>
+  <article class="wrapper">
+    <h1>{{ page.title | capitalize }}</h1>
+    {{ content }}
+    <ul>
+      {% assign category = page.category %}
+      {% assign filtered_notes = site.notes | where: "category", category | sort: "last_modified_at_timestamp" | reverse %}
+    
+      {% for note in filtered_notes %}
+        <li>
+          {{ note.last_modified_at | date: "%Y · %m · %d" }} — 
+          <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">
+            {{ note.title }}
+          </a>
+        </li>
+      {% endfor %}
+  </ul>
+  </article>
+</main>
 
-<ul>
-    {% assign category = page.category %}
-    {% assign filtered_notes = site.notes | where: "category", category | sort: "last_modified_at_timestamp" | reverse %}
-  
-    {% for note in filtered_notes %}
-      <li>
-        {{ note.last_modified_at | date: "%Y · %m · %d" }} — 
-        <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">
-          {{ note.title }}
-        </a>
-      </li>
-    {% endfor %}
-</ul>
