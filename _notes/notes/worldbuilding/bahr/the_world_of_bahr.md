@@ -9,7 +9,7 @@ Bahr is a young world, shaped by ancient forces whose origin remains shrouded in
 ## Cronology
 
 - 2431: Birth of Subah Sitara, the first dragon, who brought balance to Bahr’s skies.
-- 2665: Two celestial spheres descended upon Quynth, releasing the first seeds of life.
+- 2665: First seeds of life.
 - 1409: Nazar, a mysterious traveler, arrives at the Ridge of Light.
 - 1365: The first settlements are established after centuries of nomadic life.
 - 1353: Arendes, one of the eldest elves, founds the Teesree Angoothi.
@@ -18,7 +18,6 @@ Bahr is a young world, shaped by ancient forces whose origin remains shrouded in
 - 200 (2865): The Lunar Ballad takes place, marking a major cultural turning point.
 
 ## Geography 
-
 
 Quynth is divided into some major regions, named by the elves and organized by the explorer Teresa Bochica:
 
