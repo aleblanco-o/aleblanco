@@ -6,7 +6,7 @@ permalink: /about
 
 # About Ale
 
-Hey, I’m Alejandro. For several years, I tried to find the right way to collect my ideas and projects. After giving in to the relentless variability of structures that torment my mind, I ended up building this space, indpired by Steph Ango and the concept of Digital Garten. Here are a few links to explore:
+Hey, I’m Alejandro. For several years, I tried to find the right way to collect my ideas and projects. After giving in to the relentless variability of structures that torment my mind, I ended up building this space. Here are a few links to explore:
 
 - [[writing|Writing]]
 - [[projects|Projects]]
