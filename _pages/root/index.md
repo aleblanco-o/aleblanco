@@ -14,13 +14,17 @@ This is my digital garden, feel free to explore.
 {% assign all_categories = "" | split: "" %}
 
 {% for note in site.notes %}
-  {% unless all_categories contains note.category %}
-    {% assign all_categories = all_categories | push: note.category %}
-  {% endunless %}
+  {% if note.category %}
+    {% unless all_categories contains note.category %}
+      {% assign all_categories = all_categories | push: note.category %}
+    {% endunless %}
+  {% endif %}
 {% endfor %}
 
+{% assign cleaned_categories = all_categories | compact %}
+{% assign sorted_categories = cleaned_categories | sort %}
+
 <ul>
-  {% assign sorted_categories = all_categories | sort %}
   {% for cat in sorted_categories %}
     <li>
       <a href="{{ site.baseurl }}/categories/{{ cat | slugify }}">
@@ -29,7 +33,6 @@ This is my digital garden, feel free to explore.
     </li>
   {% endfor %}
 </ul>
-
 
 <strong>Last Notes</strong>
 
