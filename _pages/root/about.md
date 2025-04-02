@@ -15,7 +15,7 @@ Hey, I’m Alejandro. For several years, I tried to find the right way to collec
 
 ## Social
 
-- :
+- Mastodon : [@aleblanco](https://mastodon.social/@aleblanco)
 
 ## Colophon
 
