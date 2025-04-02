@@ -8,6 +8,6 @@ category: worldbuilding
 
 ## Tags
 
-[[bahr|Bahr]], [[one|One]]
+[[bahr]], [[une]]
 
 

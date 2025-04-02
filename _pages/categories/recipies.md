@@ -7,4 +7,4 @@ category: recipies
 
 ## Tags
 
-[[sweet|Sweet]], [[wago|Wago]]
+[[sweet]], [[wago]]
