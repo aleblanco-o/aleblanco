@@ -5,6 +5,10 @@ permalink: /projects
 category: projects
 ---
 
+# Tags
+
+[[robotics]]
+
 - 2025
 - 2020
 - 2017
